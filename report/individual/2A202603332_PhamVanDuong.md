@@ -4,11 +4,11 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên:
-- MSSV:
-- Email:
-- Lớp:
-- Link repo bài làm:
+- Họ tên: Phạm Văn Dương
+- MSSV: 2A202603332
+- Email: 26ai.duongpv@vinuni.edu.vn
+- Lớp: L2B
+- Link repo bài làm: https://github.com/pvd2201/K5-L2B-DAY02-PhamVanDuong-2A202603332-ObjectDetection
 - Link Colab đã chạy:
 
 ## 2. Schema và mini guideline
@@ -17,26 +17,36 @@ Dẫn tới [GUIDELINE_MINI.md](../../GUIDELINE_MINI.md). Tóm tắt ba ca mơ h
 
 ## 3. Annotation và self-QC
 
-- Số file nhãn train:
-- Kết quả checker và lỗi đã xử lý:
+- Số file nhãn train: 50
+- Kết quả checker và lỗi đã xử lý: PASS
 - Danh sách ít nhất 10 ảnh đã rà bằng mắt:
-- Lỗi bỏ sót/box/class phát hiện khi rà và cách sửa:
-- Commit khóa nhãn ban đầu:
+drive_002.jpg
+drive_003.jpg
+drive_005.jpg
+drive_009.jpg
+drive_011.jpg
+drive_012.jpg
+drive_014.jpg
+drive_019.jpg
+drive_026.jpg
+drive_028.jpg
+- Lỗi bỏ sót/box/class phát hiện khi rà và cách sửa: Lỗi bỏ sót: vẽ thiếu box cho những xe có thể nhận diện. Cách sửa:bổ sung box. Phát hiện một số box chưa ôm sát thân xe, đã điều chỉnh lại.
+- Commit khóa nhãn ban đầu: f40afde
 
 ## 4. Gold QC và rework
 
 | Chỉ số | Trước sửa | Sau sửa nếu có |
 |---|---:|---:|
-| TP | | |
-| FP | | |
-| FN | | |
-| Precision | | |
-| Recall | | |
-| F1 | | |
-| mean_iou_of_matches | | |
-| passed | | |
+| TP |478 | |
+| FP |568 | |
+| FN | 175| |
+| Precision | 0.457| |
+| Recall | 0.732| |
+| F1 |0.5627 | |
+| mean_iou_of_matches |0.849| |
+| passed |false | |
 
-Dẫn tới `outputs/annotation_evaluation.json` trong repo. Nếu rework, ghi ảnh, lỗi đã kiểm, quyết định sửa/giữ và lý do. Không suy nguyên nhân chỉ từ FP/FN. Không có rework thì ghi rõ.
+Không rework. Lý do : file Golden train label đang bị sai. Lab Coach đã hướng dẫn bỏ qua.
 
 ## 5. Kết quả YOLO
 
